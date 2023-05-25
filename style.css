@@ -13,6 +13,150 @@ Text Domain: blank
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 */
 
+@font-face {
+    font-family: 'PP Hatton';
+    font-weight: bold;
+    src: url(./asset/font/PP\ Hatton\ Bold\ 700.woff2);
+}
+:root{
+    --noir : #000;
+    --blanc : #fff;
+    --vert : #B1F160;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+ul, ol{
+    list-style: none;
+}
+img {
+    vertical-align: bottom;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+}
+label:not(:first-child){
+  margin-top: 2rem;
+}
+input{
+  border-radius: 5px;
+  border: none;
+  padding: .3rem;
+}
+input[type=submit]{
+  padding: .5rem;
+  margin: 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius : 10px;
+}
+textarea{
+  resize: none;
+  height: 5rem;
+}
+.error{
+  color: red;
+}
+html{
+    scroll-behavior: smooth;
+}
 body{
-    background: lime;
+    font: 400 16px/1.4 Verdana, Arial, sans-serif;
+    background: var(--vert);
+    overflow-x: hidden;
+}
+body::-webkit-scrollbar{
+    width: .5rem;
+}
+body::-webkit-scrollbar-thumb{
+    background: rgba(0,0,0, 0.7);
+    border-radius: 10px;
+}
+
+/* Menu */
+
+#masthead{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 6rem;
+    max-height: 6rem;
+    z-index: 100;
+}
+#masthead nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#masthead .menu{
+    display: flex;
+    gap: 2.7rem;
+}
+#masthead .menu a{
+    color: var(--blanc);
+    font-family: 'PP Hatton';
+    font-size: 20px;
+}
+#masthead .menu a:hover{
+    color: var(--noir);
+}
+
+/* Logo + RS */
+
+.head-logo{
+    position: absolute;
+    top: 0;
+    left: 4rem;
+}
+
+.hover-logo{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.hover-logo.none{
+    display: none;
+}
+.hover-logo .fb, .hover-logo .insta{
+    width: 2.4rem;
+    height: 2.06rem;
+}
+.hover-logo .fb{
+    transform: translateX(150%);
+}
+.hover-logo .insta{
+    transform: translateX(150%);
+}
+.hover-logo .fb:hover, .hover-logo .insta:hover{
+    opacity: .7;
+}
+
+/* flexslider */
+
+#intro .flexslider{
+    border: none;
+    position: relative;
+    width: 100vw;
+}
+.flexslider ol a{
+    width: 4rem;
+    height: 1.3rem;
+    background: var(--blanc);
+    z-index: 110;
+}
+.flexslider ol a.flex-active{
+    background: #b9b9b9;
 }

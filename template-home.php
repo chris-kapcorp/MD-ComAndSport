@@ -2,6 +2,9 @@
 
 /* Template Name: Homepage */
 
+global $all;
+$metaHome = get_post_meta($all['page']['homepage']['id']);
+
 get_header();
 
 get_template_part('view/home/home', 'intro');
