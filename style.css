@@ -82,6 +82,22 @@ body::-webkit-scrollbar-thumb{
     border-radius: 10px;
 }
 
+.head-wrap{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1300px;
+}
+.wrap{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.title{
+    font-family: 'PP Hatton';
+    font-size: 24px;
+}
+
 /* Menu */
 
 #masthead{
@@ -149,7 +165,6 @@ body::-webkit-scrollbar-thumb{
 #intro .flexslider{
     border: none;
     position: relative;
-    width: 100vw;
 }
 .flexslider ol a{
     width: 4rem;
@@ -159,4 +174,37 @@ body::-webkit-scrollbar-thumb{
 }
 .flexslider ol a.flex-active{
     background: #b9b9b9;
+}
+
+/* Partie infos */
+
+#infos{
+    margin: 5rem auto;
+    background: var(--noir);
+    width: 94%;
+}
+#infos .head-wrap{
+    color: var(--blanc);
+}
+#infos .header-infos{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5rem;
+}
+#infos .head-infos{
+    font-size: 32px;
+}
+
+#infos .line{
+    border-top: solid 2px var(--blanc);
+    width: 100%;
+}
+
+#infos .wrap{
+    color: var(--blanc);
+}
+#infos .title{
+    text-align: center;
+    margin: 4rem 0;
 }
