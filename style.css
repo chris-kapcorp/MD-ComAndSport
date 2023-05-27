@@ -32,9 +32,9 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 a{
     text-decoration: none;
 }
-ul, ol{
+/* ul, ol{
     list-style: none;
-}
+} */
 img {
     vertical-align: bottom;
 }
@@ -162,9 +162,20 @@ body::-webkit-scrollbar-thumb{
 
 /* flexslider */
 
-#intro .flexslider{
-    border: none;
+.flexslider{
     position: relative;
+    width: 100vw;
+    height: 100vh;
+    border: none;
+}
+.flexslider .slides li {
+    width: 100%;
+    height: 100vh;
+}
+.flexslider .slides li img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 .flexslider ol a{
     width: 4rem;
@@ -207,4 +218,65 @@ body::-webkit-scrollbar-thumb{
 #infos .title{
     text-align: center;
     margin: 4rem 0;
+}
+
+#infos .infos-container{
+    display: flex;
+    text-align: center;
+    gap: 7rem;
+    margin-bottom: 4rem;
+}
+#infos .infos-left, #infos .infos-right{
+    width: 90%;
+}
+#infos .infos-desc{
+    width: 90%;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+#infos .card-container{
+    display: flex;
+}
+#infos .card .icon-card{
+    width: 120px;
+    height: 108px;
+    margin-top: 1rem;
+    fill: var(--blanc);
+}
+#infos .card, #infos .card.hover{
+    border: 1px solid var(--blanc);
+    border-radius: 10px;
+    width: 13.6rem;
+    height: 20.5rem;
+}
+#infos .card-back{
+    color: var(--blanc);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+#infos .card .card-title{
+    font-family: 'PP Hatton';
+    padding: 1rem 0;
+}
+#infos .card.hover{
+    background: var(--blanc);
+    color: var(--noir);
+}
+#infos .card-title.hover{
+    text-align: center;
+    padding: 1rem;
+    font-size: 20px;
+}
+#infos .line-hover{
+    border-top: 1px solid var(--noir);
+    padding-bottom: 1rem;
+}
+#infos .desc-service{
+    text-align: center;
 }
