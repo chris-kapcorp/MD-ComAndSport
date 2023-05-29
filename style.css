@@ -32,9 +32,9 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 a{
     text-decoration: none;
 }
-/* ul, ol{
+ul, ol{
     list-style: none;
-} */
+}
 img {
     vertical-align: bottom;
 }
@@ -235,21 +235,73 @@ body::-webkit-scrollbar-thumb{
     margin: 0 auto;
 }
 
-#infos .card-container{
+/* Mes services */
+
+#infos .all-card-wrap{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 7.25rem;
+    padding: 2rem;
+    margin-bottom: 75px;
 }
-#infos .card .icon-card{
-    width: 120px;
-    height: 108px;
-    margin-top: 1rem;
-    fill: var(--blanc);
+#infos .card-container{
+    width: 218px;
+    /* height: 328px; */
+    height: 400px;
+    perspective: 800px;
 }
-#infos .card, #infos .card.hover{
+#infos .card-container:hover > .card{
+    transform: rotateY(180deg);
+    cursor: pointer;
+}
+#infos .card{
     border: 1px solid var(--blanc);
     border-radius: 10px;
-    width: 13.6rem;
-    height: 20.5rem;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
 }
+#infos .card-back .wrap-icon, #infos .card-back .card-title{
+    width: 90%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#infos .card .icon-card{
+    min-width: 120px;
+    min-height: 108px;
+    margin-top: 1rem;
+    filter: invert(1);
+}
+#infos .card.one .icon-card{
+    background: url('asset/img/icon1.svg');
+}
+#infos .card.two .icon-card{
+    background: url('asset/img/icon2.svg');
+}
+#infos .card.three .icon-card{
+    background: url('asset/img/icon3.svg');
+}
+#infos .card.four .icon-card{
+    background: url('asset/img/icon4.svg');
+}
+#infos .card.five .icon-card{
+    background: url('asset/img/icon5.svg');
+}
+
+#infos .card-back, #infos .card-front{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backface-visibility: hidden;
+}
+
 #infos .card-back{
     color: var(--blanc);
     text-align: center;
@@ -264,19 +316,42 @@ body::-webkit-scrollbar-thumb{
     font-family: 'PP Hatton';
     padding: 1rem 0;
 }
-#infos .card.hover{
+#infos .card-back .card-title{
+    width: 90%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#infos .card-front{
     background: var(--blanc);
     color: var(--noir);
+    transform: rotateY(180deg);
 }
 #infos .card-title.hover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     padding: 1rem;
     font-size: 20px;
+    width: 100%;
+    height: 30%;
+    margin: 0 auto;
 }
 #infos .line-hover{
     border-top: 1px solid var(--noir);
-    padding-bottom: 1rem;
 }
-#infos .desc-service{
-    text-align: center;
+#infos .card-front .wrap-desc-service{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 66%;
+    padding: 1rem;
+    margin: 0.5rem auto;
+}
+#infos .desc-service li{
+    text-align: left;
 }

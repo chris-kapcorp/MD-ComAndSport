@@ -1,10 +1,4 @@
 <?php global $all; global $metaHome; global $svg;
-
-
-
-debug($metaHome);
-debug($svg);
-debug($all);
 ?>
 
 <div id="infos">
@@ -35,31 +29,165 @@ debug($all);
 
         <h2 class="title">Mes Services</h2>
 
-        <div class="card-container">
-            <div class="card one hover">
-                <!-- <div class="card-back">
-                    <div class="icon_card">
-                        <?php echo $svg['icon_service_1']; ?>
+        <div class="all-card-wrap">
+            <div class="card-container one">
+                <div class="card one">
+                    <div class="card-back">
+                        <div class="wrap-icon">
+                            <div class="icon-card"></div>
+                        </div>
+                        
+                        <?php if(!empty($metaHome['titre_service_1'][0])){ ?>
+                            <h2 class="card-title"><?php echo ucfirst($metaHome['titre_service_1'][0]); ?></h2>
+                        <?php  } ?>
                     </div>
-                
-                    <?php if(!empty($metaHome['titre_service_1'][0])){ ?>
-                        <h2 class="card-title"><?php echo ucfirst($metaHome['titre_service_1'][0]); ?></h2>
-                    <?php  } ?>
-                </div> -->
 
-                <div class="card-front">
-                    <?php if(!empty($metaHome['titre_service_1'][0])){ ?>
-                            <h2 class="card-title hover"><?php echo ucfirst($metaHome['titre_service_1'][0]); ?></h2>
-                    <?php  } ?>
+                    <div class="card-front">
+                        <?php if(!empty($metaHome['titre_service_1'][0])){ ?>
+                                <h2 class="card-title hover"><?php echo ucfirst($metaHome['titre_service_1'][0]); ?></h2>
+                        <?php  } ?>
 
-                    <div class="line-hover"></div>
+                        <div class="line-hover"></div>
 
-                    <ul class="desc-service">
-                        <li><?php echo ucfirst(nl2br($metaHome['description_service_1'][0])); ?></li>
-                    </ul>   
-                </div> 
-                                   
+                        <div class="wrap-desc-service">
+                            <ul class="desc-service">
+                                <?php  
+                                    if(!empty($metaHome['description_service_1'][0])){ ?>
+                                    <li><?php echo ucfirst(nl2br($metaHome['description_service_1'][0])); ?></li>
+                                <?php } ?>
+                            </ul> 
+                        </div>  
+                    </div>               
+                </div>
+            </div>
+            
+            <div class="card-container two">
+                <div class="card two">
+                    <div class="card-back">
+                        <div class="wrap-icon">
+                            <div class="icon-card"></div>
+                        </div>
+                    
+                        <?php if(!empty($metaHome['titre_service_2'][0])){ ?>
+                            <h2 class="card-title"><?php echo ucfirst($metaHome['titre_service_2'][0]); ?></h2>
+                        <?php  } ?>
+                    </div>
+
+                    <div class="card-front">
+                        <?php if(!empty($metaHome['titre_service_2'][0])){ ?>
+                                <h2 class="card-title hover"><?php echo ucfirst($metaHome['titre_service_2'][0]); ?></h2>
+                        <?php  } ?>
+
+                        <div class="line-hover"></div>
+
+                        <div class="wrap-desc-service">
+                            <ul class="desc-service">
+                                <?php  
+                                    if(!empty($metaHome['description_service_2'][0])){ ?>
+                                    <li><?php echo ucfirst(nl2br($metaHome['description_service_2'][0])); ?></li>
+                                <?php } ?>
+                            </ul> 
+                        </div>  
+                    </div>               
+                </div>
+            </div>
+
+            <div class="card-container three">
+                <div class="card three">
+                    <div class="card-back">
+                        <div class="wrap-icon">
+                            <div class="icon-card"></div>
+                        </div>
+                    
+                        <?php if(!empty($metaHome['titre_service_3'][0])){ ?>
+                            <h2 class="card-title"><?php echo ucfirst($metaHome['titre_service_3'][0]); ?></h2>
+                        <?php  } ?>
+                    </div>
+
+                    <div class="card-front">
+                        <?php if(!empty($metaHome['titre_service_3'][0])){ ?>
+                                <h2 class="card-title hover"><?php echo ucfirst($metaHome['titre_service_3'][0]); ?></h2>
+                        <?php  } ?>
+
+                        <div class="line-hover"></div>
+
+                        <div class="wrap-desc-service">
+                            <ul class="desc-service">
+                                <?php  
+                                    if(!empty($metaHome['description_service_5'][0])){ ?>
+                                    <li><?php echo ucfirst(nl2br($metaHome['description_service_5'][0])); ?></li>
+                                <?php } ?>
+                            </ul> 
+                        </div>  
+                    </div>               
+                </div>
+            </div>
+
+            <div class="card-container four">
+                <div class="card four">
+                    <div class="card-back">
+                        <div class="wrap-icon">
+                            <div class="icon-card"></div>
+                        </div>
+                    
+                        <?php if(!empty($metaHome['titre_service_4'][0])){ ?>
+                            <h2 class="card-title"><?php echo ucfirst($metaHome['titre_service_4'][0]); ?></h2>
+                        <?php  } ?>
+                    </div>
+
+                    <div class="card-front">
+                        <?php if(!empty($metaHome['titre_service_4'][0])){ ?>
+                                <h2 class="card-title hover"><?php echo ucfirst($metaHome['titre_service_4'][0]); ?></h2>
+                        <?php  } ?>
+
+                        <div class="line-hover"></div>
+
+                        <div class="wrap-desc-service">
+                            <ul class="desc-service">
+                                <?php  
+                                    if(!empty($metaHome['description_service_4'][0])){ ?>
+                                    <li><?php echo ucfirst(nl2br($metaHome['description_service_4'][0])); ?></li>
+                                <?php } ?>
+                            </ul> 
+                        </div>  
+                    </div>               
+                </div>
+            </div>
+
+            <div class="card-container five">
+                <div class="card five">
+                    <div class="card-back">
+                        <div class="wrap-icon">
+                            <div class="icon-card"></div>
+                        </div>
+                    
+                        <?php if(!empty($metaHome['titre_service_5'][0])){ ?>
+                            <h2 class="card-title"><?php echo ucfirst($metaHome['titre_service_5'][0]); ?></h2>
+                        <?php  } ?>
+                    </div>
+
+                    <div class="card-front">
+                        <?php if(!empty($metaHome['titre_service_5'][0])){ ?>
+                                <h2 class="card-title hover"><?php echo ucfirst($metaHome['titre_service_5'][0]); ?></h2>
+                        <?php  } ?>
+
+                        <div class="line-hover"></div>
+                        
+                        <div class="wrap-desc-service">
+                            <ul class="desc-service">
+                                <?php  
+                                    if(!empty($metaHome['description_service_5'][0])){ ?>
+                                    <li><?php echo ucfirst(nl2br($metaHome['description_service_5'][0])); ?></li>
+                                <?php } ?>
+                            </ul> 
+                        </div>
+                    </div>               
+                </div>
             </div>
         </div>
+
+        <?php if(!empty($metaHome['post_scriptum'][0])){ ?>
+            <p class="serv-legend"><?php echo $metaHome['post_scriptum'][0]; ?></p>
+        <?php } ?>
     </div>
 </div>

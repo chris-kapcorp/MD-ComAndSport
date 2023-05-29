@@ -6,8 +6,6 @@ require get_template_directory() . '/inc/func.php';
 require get_template_directory() . '/inc/general.php';
 require get_template_directory() . '/inc/images.php';
 require get_template_directory() . '/inc/parameters.php';
-require get_template_directory() . '/asset/svg/svg.php';
-
 
 require get_template_directory() . '/inc/extra/template-tags.php';
 require get_template_directory() . '/inc/extra/template-functions.php';
