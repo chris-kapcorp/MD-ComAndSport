@@ -7,5 +7,9 @@ $all = array(
             'id' => 7,
             'slug' => 'homepage'
         ),
+        'infos' => array(
+            'id' => 7,
+            'slug' => '#infos'
+        ),
     ),
 );

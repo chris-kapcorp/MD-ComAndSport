@@ -36,7 +36,7 @@
 		<nav>
 			<ul class="menu">
 				<li><a href="<?php echo $all['page']['homepage']['slug']; ?>">Accueil</a></li>
-				<li><a href="<?php echo $all['page']['homepage']['slug']; ?>">Qui suis-je ?</a></li>
+				<li><a href="<?php echo $all['page']['infos']['slug']; ?>">Qui suis-je ?</a></li>
 				<li><a href="<?php echo $all['page']['homepage']['slug']; ?>">Actualités</a></li>
 				<li><a href="<?php echo $all['page']['homepage']['slug']; ?>">Partenaires</a></li>
 				<li><a href="<?php echo $all['page']['homepage']['slug']; ?>">Contact</a></li>

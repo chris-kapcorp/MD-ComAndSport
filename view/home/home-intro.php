@@ -17,11 +17,11 @@ global $all;
                 if($slides_query->have_posts()){
                     while($slides_query->have_posts()){
                         $slides_query->the_post();
-                        $diapo = get_the_post_thumbnail_url(get_the_ID());
+                        $diapo = get_the_post_thumbnail_url(get_the_ID(), 'diapo');
             ?>
 
                 <li>
-                    <img src="<?php echo $diapo; ?>" alt="<?php echo get_the_ID(); ?>"/>
+                    <img src="<?php echo $diapo; ?>" alt="<?php echo get_the_title(); ?>"/>
                 </li>
 
                 <?php    }

@@ -50,12 +50,10 @@
                         <div class="line-hover"></div>
 
                         <div class="wrap-desc-service">
-                            <ul class="desc-service">
-                                <?php  
-                                    if(!empty($metaHome['description_service_1'][0])){ ?>
-                                    <li><?php echo ucfirst(nl2br($metaHome['description_service_1'][0])); ?></li>
-                                <?php } ?>
-                            </ul> 
+                            <?php  
+                                if(!empty($metaHome['description_service_1'][0])){
+                                firstLetterUpperList($metaHome, 'description_service_1', 'desc-service');
+                            } ?>
                         </div>  
                     </div>               
                 </div>
@@ -81,12 +79,10 @@
                         <div class="line-hover"></div>
 
                         <div class="wrap-desc-service">
-                            <ul class="desc-service">
-                                <?php  
-                                    if(!empty($metaHome['description_service_2'][0])){ ?>
-                                    <li><?php echo ucfirst(nl2br($metaHome['description_service_2'][0])); ?></li>
-                                <?php } ?>
-                            </ul> 
+                            <?php  
+                                if(!empty($metaHome['description_service_2'][0])){
+                                firstLetterUpperList($metaHome, 'description_service_2', 'desc-service');
+                            } ?>
                         </div>  
                     </div>               
                 </div>
@@ -112,12 +108,10 @@
                         <div class="line-hover"></div>
 
                         <div class="wrap-desc-service">
-                            <ul class="desc-service">
-                                <?php  
-                                    if(!empty($metaHome['description_service_5'][0])){ ?>
-                                    <li><?php echo ucfirst(nl2br($metaHome['description_service_5'][0])); ?></li>
-                                <?php } ?>
-                            </ul> 
+                            <?php  
+                                if(!empty($metaHome['description_service_3'][0])){
+                                firstLetterUpperList($metaHome, 'description_service_3', 'desc-service');
+                            } ?>
                         </div>  
                     </div>               
                 </div>
@@ -143,12 +137,10 @@
                         <div class="line-hover"></div>
 
                         <div class="wrap-desc-service">
-                            <ul class="desc-service">
-                                <?php  
-                                    if(!empty($metaHome['description_service_4'][0])){ ?>
-                                    <li><?php echo ucfirst(nl2br($metaHome['description_service_4'][0])); ?></li>
-                                <?php } ?>
-                            </ul> 
+                            <?php  
+                                if(!empty($metaHome['description_service_4'][0])){
+                                firstLetterUpperList($metaHome, 'description_service_4', 'desc-service');
+                            } ?>
                         </div>  
                     </div>               
                 </div>
@@ -174,12 +166,10 @@
                         <div class="line-hover"></div>
                         
                         <div class="wrap-desc-service">
-                            <ul class="desc-service">
-                                <?php  
-                                    if(!empty($metaHome['description_service_5'][0])){ ?>
-                                    <li><?php echo ucfirst(nl2br($metaHome['description_service_5'][0])); ?></li>
-                                <?php } ?>
-                            </ul> 
+                            <?php  
+                                if(!empty($metaHome['description_service_5'][0])){
+                                firstLetterUpperList($metaHome, 'description_service_2', 'desc-service');
+                            } ?> 
                         </div>
                     </div>               
                 </div>
