@@ -71,11 +71,18 @@ html{
 }
 body{
     font: 400 16px/1.4 Verdana, Arial, sans-serif;
-    background: var(--vert);
+    /* background: var(--vert); */
+    background-color: magenta;
+    width: 100vw;
+    height: 100vh;
     overflow-x: hidden;
+    overflow-y: auto;
 }
 body::-webkit-scrollbar{
     display: none;
+}
+#wpadminbar{
+    width: 100vw;
 }
 
 .head-wrap{
@@ -92,6 +99,12 @@ body::-webkit-scrollbar{
 .title{
     font-family: 'PP Hatton';
     font-size: 24px;
+    text-align: center;
+    margin: 4rem 0;
+}
+#infos,#actus,#contact{
+    margin: 5rem auto;
+    width: 94%;
 }
 
 /* Menu */
@@ -106,10 +119,30 @@ body::-webkit-scrollbar{
     max-height: 6rem;
     z-index: 100;
 }
+#masthead .main-menu{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* background-color: magenta; */
+}
 #masthead nav{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 80%;
+    /* background-color: blue; */
+}
+#masthead .mobile-main-menu{
+    position: absolute;
+    top: 0;
+    right: -125vw;
+    background-color: var(--vert);
+    height: 100vh;
+    width: 25%;
+    text-align: right;
+    transition: ease-in-out .5s;
 }
 
 #masthead .menu{
@@ -124,33 +157,36 @@ body::-webkit-scrollbar{
 #masthead .menu a:hover{
     color: var(--noir);
 }
+#masthead .menu-mobile, #masthead .mobile-close{
+    visibility: hidden;
+}
 
 /* Logo + RS */
 
-.head-logo{
+.head-logo, .mobile-head-logo{
     position: absolute;
     top: 0;
     left: 4rem;
     transition: all 1s;
 }
+.mobile-head-logo {
+    display: none;
+}
 
-.hover-logo{
+.hover-logo, .mobile-hover-logo{
     position: relative;
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
-.hover-logo.none{
+.hover-logo.none, .mobile-hover-logo.none{
     display: none;
 }
-.hover-logo .fb, .hover-logo .insta{
+.hover-logo .fb, .hover-logo .insta, .mobile-hover-logo .fb, .mobile-hover-logo .insta{
     width: 2.4rem;
     height: 2.06rem;
 }
-.hover-logo .fb{
-    transform: translateX(150%);
-}
-.hover-logo .insta{
+.hover-logo .fb, .hover-logo .insta, .mobile-hover-logo .fb, .mobile-hover-logo .insta{
     transform: translateX(150%);
 }
 .hover-logo .fb:hover, .hover-logo .insta:hover{
@@ -187,9 +223,7 @@ body::-webkit-scrollbar{
 /* Partie infos */
 
 #infos{
-    margin: 5rem auto;
     background: var(--noir);
-    width: 94%;
 }
 #infos .head-wrap{
     color: var(--blanc);
@@ -211,10 +245,6 @@ body::-webkit-scrollbar{
 
 #infos .wrap{
     color: var(--blanc);
-}
-#infos .title{
-    text-align: center;
-    margin: 4rem 0;
 }
 
 #infos .infos-container{
@@ -359,4 +389,104 @@ body::-webkit-scrollbar{
 #infos .desc-service li{
     text-align: left;
     margin: 0 auto .3rem;
+}
+
+/* Actualités */
+
+#actus{
+    background: var(--blanc);
+    height: 100vh;
+}
+
+
+
+
+@media screen and (max-width: 1265px){
+    #masthead nav{
+        justify-content: flex-end;
+    }
+    #infos .infos-container{
+        gap: 3rem;
+    }
+}
+@media screen and (max-width: 1100px){
+    #masthead .main-menu{
+        display: none;
+    }
+
+    #masthead .mobile{
+        width: 100%;
+        text-align: right;
+        padding-right: 2rem;
+    }
+     #masthead .mobile svg{
+        width: 70px;
+        height: 67px;
+    }
+    #masthead .mobile-main-menu.open{
+        background-color: var(--vert);
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 25%;
+        text-align: right;
+    }
+    #masthead .upper-mobile{
+        height: 15%;
+        display: flex;
+        justify-content: end;
+    }
+    #masthead .mobile-close{
+        visibility: visible;
+        color: red;
+        font-size: 1.5rem;
+        font-weight: bold;
+        padding: 1.5rem;
+        width: fit-content;
+        height: fit-content;
+    }
+    #masthead .mobile-line{
+        border-top: 5px solid var(--noir);
+        width: 100%;
+    }
+
+    #masthead nav{
+        display: flex;
+        align-items: center;
+        text-align: left;
+        width: 100%;
+        height: 80%;
+        padding-left: 1rem;
+    }
+    #masthead .menu-mobile{
+        visibility: visible;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: 50%;
+        gap: 25px;
+    }
+    #masthead .menu-mobile li a{
+        color: var(--noir);
+    }
+
+    #masthead .head-logo{
+        display: none;
+    }
+    #masthead .mobile-head-logo{
+        display: block;
+    }
+    
+}
+@media screen and (max-width: 1000px){
+    .title{
+        margin: 3rem 0 2rem;
+    }
+    #infos .infos-container{
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+        margin-top: 0;
+    }
 }
