@@ -71,8 +71,7 @@ html{
 }
 body{
     font: 400 16px/1.4 Verdana, Arial, sans-serif;
-    /* background: var(--vert); */
-    background-color: magenta;
+    background: var(--vert);
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
@@ -125,26 +124,26 @@ body::-webkit-scrollbar{
     justify-content: center;
     align-items: center;
     position: relative;
-    /* background-color: magenta; */
 }
 #masthead nav{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 80%;
-    /* background-color: blue; */
 }
 #masthead .mobile-main-menu{
+    visibility: hidden;
+}
+#masthead .mobile-main-menu .mobile-container{
     position: absolute;
     top: 0;
-    right: -125vw;
+    right: -100vw;
     background-color: var(--vert);
     height: 100vh;
     width: 25%;
     text-align: right;
     transition: ease-in-out .5s;
 }
-
 #masthead .menu{
     display: flex;
     gap: 2.7rem;
@@ -156,9 +155,6 @@ body::-webkit-scrollbar{
 }
 #masthead .menu a:hover{
     color: var(--noir);
-}
-#masthead .menu-mobile, #masthead .mobile-close{
-    visibility: hidden;
 }
 
 /* Logo + RS */
@@ -198,17 +194,25 @@ body::-webkit-scrollbar{
 .flexslider{
     position: relative;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     border: none;
+    overflow: hidden;
 }
 .flexslider .slides li{
     width: 100vw;
     height: 100vh;
+    background-color: var(--vert);
 }
 .flexslider .slides li img {
     object-fit: cover;
+    object-position: center;
     width: 100%;
     height: 100%;
+}
+.flexslider ol{
+    position: absolute;
+    bottom: 4rem;
+    z-index: 100;
 }
 .flexslider ol a{
     width: 4rem;
@@ -424,13 +428,17 @@ body::-webkit-scrollbar{
         height: 67px;
     }
     #masthead .mobile-main-menu.open{
-        background-color: var(--vert);
+        visibility: visible;
+        display: contents;
+    }
+    #masthead .mobile-main-menu .mobile-container{
         position: absolute;
         top: 0;
         right: 0;
         height: 100vh;
         width: 25%;
         text-align: right;
+        background-color: var(--vert);
     }
     #masthead .upper-mobile{
         height: 15%;
@@ -438,7 +446,6 @@ body::-webkit-scrollbar{
         justify-content: end;
     }
     #masthead .mobile-close{
-        visibility: visible;
         color: red;
         font-size: 1.5rem;
         font-weight: bold;
@@ -447,7 +454,7 @@ body::-webkit-scrollbar{
         height: fit-content;
     }
     #masthead .mobile-line{
-        border-top: 5px solid var(--noir);
+        border-top: 1px solid var(--noir);
         width: 100%;
     }
 
@@ -460,7 +467,6 @@ body::-webkit-scrollbar{
         padding-left: 1rem;
     }
     #masthead .menu-mobile{
-        visibility: visible;
         flex-direction: column;
         justify-content: center;
         width: 100%;
@@ -488,5 +494,30 @@ body::-webkit-scrollbar{
         align-items: center;
         gap: 3rem;
         margin-top: 0;
+    }
+}
+@media screen and (max-width: 900px){
+    #infos .header-infos img{
+        display: none;
+    }
+}
+@media screen and (max-width: 800px){
+    #masthead .mobile-main-menu .mobile-container{
+        width: 35%;
+    }
+}
+@media screen and (max-width: 400px){
+    #masthead .mobile-main-menu .mobile-container{
+        width: 100%;
+        text-align: center;
+    }
+    #masthead .mobile-main-menu .mobile-container .menu-mobile{
+        text-align: center;
+    }
+    .flexslider ol{
+        z-index: 10;
+    }
+    .head-logo, .mobile-head-logo{
+        left: 0;
     }
 }

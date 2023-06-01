@@ -87,21 +87,22 @@
 		</div>
 
 		<div class="mobile-main-menu">
+			<div class="mobile-container">
+				<div class="upper-mobile">
+					<div class="mobile-close">X</div>
+				</div>
 
-			<div class="upper-mobile">
-				<div class="mobile-close">X</div>
+				<div class="mobile-line"></div>
+
+				<nav>
+					<ul class="menu menu-mobile">
+						<li><a href="<?php echo $all['page']['homepage']['slug']; ?>">Accueil</a></li>
+						<li><a href="<?php echo $all['page']['infos']['slug']; ?>">Qui suis-je ?</a></li>
+						<li><a href="<?php echo $all['page']['homepage']['slug']; ?>">Actualités</a></li>
+						<li><a href="<?php echo $all['page']['homepage']['slug']; ?>">Partenaires</a></li>
+						<li><a href="<?php echo $all['page']['homepage']['slug']; ?>">Contact</a></li>
+					</ul>
+				</nav>
 			</div>
-
-			<div class="mobile-line"></div>
-
-			<nav>
-				<ul class="menu menu-mobile">
-					<li><a href="<?php echo $all['page']['homepage']['slug']; ?>">Accueil</a></li>
-					<li><a href="<?php echo $all['page']['infos']['slug']; ?>">Qui suis-je ?</a></li>
-					<li><a href="<?php echo $all['page']['homepage']['slug']; ?>">Actualités</a></li>
-					<li><a href="<?php echo $all['page']['homepage']['slug']; ?>">Partenaires</a></li>
-					<li><a href="<?php echo $all['page']['homepage']['slug']; ?>">Contact</a></li>
-				</ul>
-			</nav>
 		</div>
 	</header>

@@ -11,5 +11,9 @@ $all = array(
             'id' => 7,
             'slug' => '#infos'
         ),
+        'actus' => array(
+            'id' => 7,
+            'slug' => '#actus'
+        ),
     ),
 );
