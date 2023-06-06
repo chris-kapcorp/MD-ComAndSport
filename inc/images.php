@@ -1,3 +1,3 @@
 <?php
 
-add_image_size('diapo', 1512, 982, true);
+add_image_size('actu_cover', 289, 175, true);

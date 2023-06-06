@@ -5,7 +5,7 @@ global $all;
     $args = array(
         'post_type' => 'slider',
         'posts_status' => 'publish',
-        'posts-per_page' => -1
+        'posts_per_page' => -1
     );
 
     $slides_query = new WP_Query($args);
@@ -17,7 +17,7 @@ global $all;
                 if($slides_query->have_posts()){
                     while($slides_query->have_posts()){
                         $slides_query->the_post();
-                        $diapo = get_the_post_thumbnail_url(get_the_ID(), 'diapo');
+                        $diapo = get_the_post_thumbnail_url(get_the_ID());
             ?>
 
                 <li>

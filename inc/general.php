@@ -63,6 +63,8 @@ function mdcs_scripts() {
         wp_enqueue_script('jquery','https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js',array(), _S_VERSION, true);
         wp_enqueue_script('flexslider-js', get_template_directory_uri().'/asset/flexslider/jquery.flexslider-min.js', array(), _S_VERSION, true);
         wp_enqueue_script('slider-js', get_template_directory_uri() . '/asset/js/slider.js', array(), _S_VERSION, true);
+
+        wp_enqueue_script('more-actus-js', get_template_directory_uri() . '/asset/js/more-actus.js', array(), _S_VERSION, true);
     }
 }
 add_action( 'wp_enqueue_scripts', 'mdcs_scripts' );

@@ -17,7 +17,7 @@ function wpdocs_codex_slider_init() {
         'not_found'             => __( 'Aucun diaporamas trouvés.', 'textdomain' ),
         'not_found_in_trash'    => __( 'Aucun diaporamas trouvés dans la corbeille.', 'textdomain' ),
         'featured_image'        => _x( 'Diapositive', 'Overrides the “Featured Image” phrase for this post type. Added in 4.3', 'textdomain' ),
-        'set_featured_image'    => _x( 'Déterminer la diapositive', 'Overrides the “Set featured image” phrase for this post type. Added in 4.3', 'textdomain' ),
+        'set_featured_image'    => _x( 'Choisir la diapositive', 'Overrides the “Set featured image” phrase for this post type. Added in 4.3', 'textdomain' ),
         'remove_featured_image' => _x( 'Retirer la diapositive', 'Overrides the “Remove featured image” phrase for this post type. Added in 4.3', 'textdomain' ),
         'use_featured_image'    => _x( 'Use as cover image', 'Overrides the “Use as featured image” phrase for this post type. Added in 4.3', 'textdomain' ),
         'archives'              => _x( 'slider archives', 'The post type archive label used in nav menus. Default “Post Archives”. Added in 4.4', 'textdomain' ),

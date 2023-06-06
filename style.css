@@ -99,7 +99,7 @@ body::-webkit-scrollbar{
     font-family: 'PP Hatton';
     font-size: 24px;
     text-align: center;
-    margin: 4rem 0;
+    padding: 4rem 0;
 }
 #infos,#actus,#contact{
     margin: 5rem auto;
@@ -132,7 +132,7 @@ body::-webkit-scrollbar{
     width: 80%;
 }
 #masthead .mobile-main-menu{
-    visibility: hidden;
+    display: none;
 }
 #masthead .mobile-main-menu .mobile-container{
     position: absolute;
@@ -142,7 +142,6 @@ body::-webkit-scrollbar{
     height: 100vh;
     width: 25%;
     text-align: right;
-    transition: ease-in-out .5s;
 }
 #masthead .menu{
     display: flex;
@@ -399,10 +398,63 @@ body::-webkit-scrollbar{
 
 #actus{
     background: var(--blanc);
-    height: 100vh;
+}
+#actus .actus-container{
+    height: max-content;
+}
+#actus .actu-show{
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+}
+#actus .actu-box{
+    display: flex;
+    margin: 2rem 0;
+    gap: 8rem;
+}
+#actus .actu-box.reverse{
+    display: flex;
+    flex-direction: row-reverse;
+}
+#actus .actu-infos{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+#actus .actu-infos .actu-title, #actus .actu-infos .desc-actu{
+    width: 100%;
+    margin: 0 auto;
+    color: var(--noir);
+}
+#actus .actu-infos .actu-title{
+    margin: 1rem auto 2rem;
+}
+#actus .actus-more{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    margin: 4rem auto;
+    cursor: pointer;
+}
+#actus .actus-more .more-text{
+    padding: 0;
+    margin: 0;
+}
+#actus .actus-more svg{
+    width: 3rem;
+    height: 2rem;
 }
 
 
+/* responsive */
+
+@media screen and (max-width: 1400px){
+    #actus .actus-container{
+        margin: 0 auto;
+        width: 85%;
+    }
+}
 
 
 @media screen and (max-width: 1265px){
@@ -413,6 +465,8 @@ body::-webkit-scrollbar{
         gap: 3rem;
     }
 }
+
+
 @media screen and (max-width: 1100px){
     #masthead .main-menu{
         display: none;
@@ -485,6 +539,8 @@ body::-webkit-scrollbar{
     }
     
 }
+
+
 @media screen and (max-width: 1000px){
     .title{
         margin: 3rem 0 2rem;
@@ -496,16 +552,29 @@ body::-webkit-scrollbar{
         margin-top: 0;
     }
 }
+
+
 @media screen and (max-width: 900px){
     #infos .header-infos img{
         display: none;
     }
+
+    #actus .actu-box, #actus .actu-box.reverse{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.625rem;
+    }
 }
+
+
 @media screen and (max-width: 800px){
     #masthead .mobile-main-menu .mobile-container{
         width: 35%;
     }
 }
+
+
 @media screen and (max-width: 400px){
     #masthead .mobile-main-menu .mobile-container{
         width: 100%;
