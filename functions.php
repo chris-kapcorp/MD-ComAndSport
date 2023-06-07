@@ -7,6 +7,9 @@ require get_template_directory() . '/inc/general.php';
 require get_template_directory() . '/inc/images.php';
 require get_template_directory() . '/inc/parameters.php';
 
+// require get_template_directory() . '/asset/ajax/more_actus_query.php';
+
+
 require get_template_directory() . '/inc/extra/template-tags.php';
 require get_template_directory() . '/inc/extra/template-functions.php';
 

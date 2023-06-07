@@ -400,7 +400,7 @@ body::-webkit-scrollbar{
     background: var(--blanc);
 }
 #actus .actus-container{
-    height: max-content;
+    max-height: max-content;
 }
 #actus .actu-show{
     display: flex;
@@ -411,10 +411,12 @@ body::-webkit-scrollbar{
     display: flex;
     margin: 2rem 0;
     gap: 8rem;
+    background: blue;
 }
 #actus .actu-box.reverse{
     display: flex;
     flex-direction: row-reverse;
+    background-color: magenta;
 }
 #actus .actu-infos{
     display: flex;
@@ -422,7 +424,7 @@ body::-webkit-scrollbar{
     text-align: center;
 }
 #actus .actu-infos .actu-title, #actus .actu-infos .desc-actu{
-    width: 100%;
+    width: 95%;
     margin: 0 auto;
     color: var(--noir);
 }

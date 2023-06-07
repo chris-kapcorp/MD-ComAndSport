@@ -4,7 +4,7 @@ global $all;
 $args = array(
     'post_type' => 'actu',
     'posts_status' => 'publish',
-    'order' => 'ASC',
+    'order' => 'DESC',
     'posts_per_page' => 3
 );
 $actu_query = new WP_Query($args);
@@ -15,37 +15,7 @@ $actu_query = new WP_Query($args);
         <h2 class="title">Dernières Actualités</h2>
 
         <div class="actus-container">
-            <div class="actu-show">
-
-                <?php if ($actu_query->have_posts()) {
-                    $count = 0;
-                    while ($actu_query->have_posts()) {
-                        $count++;
-                        $actu_query->the_post();
-                        $img_actu = get_the_post_thumbnail_url(get_the_ID(), 'actu_cover');
-                        $meta_actu = get_post_meta(get_the_ID());
-                        $is_reverse = ($count % 2 === 0) ? 'reverse' : '';
-                        ?>
-
-                        <div class="actu-box <?php echo $is_reverse; ?>">
-                            <a href=""><img src="<?php echo $img_actu; ?>" alt="<?php echo get_the_title(); ?>"></a>
-
-                            <div class="actu-infos">
-                                <a href="">
-                                    <h2 class="actu-title">
-                                        <?php echo get_the_title(); ?>
-                                    </h2>
-                                    <p class="desc-actu">
-                                        <?php echo $meta_actu['résumé_actu'][0]; ?>
-                                    </p>
-                                </a>
-                            </div>
-                        </div>
-
-                    <?php }
-                    wp_reset_postdata();
-                } ?>
-            </div>
+            <div class="actu-show"></div>
         </div>
 
         <div class="actus-more">
