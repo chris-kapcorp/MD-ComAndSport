@@ -68,3 +68,9 @@ function mdcs_scripts() {
     }
 }
 add_action( 'wp_enqueue_scripts', 'mdcs_scripts' );
+
+function remove_admin_bar() {
+    if (!current_user_can('administrator') && !is_admin()) {
+        show_admin_bar(false);
+    }
+}

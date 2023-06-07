@@ -409,19 +409,19 @@ body::-webkit-scrollbar{
 }
 #actus .actu-box{
     display: flex;
+    justify-content: space-between;
     margin: 2rem 0;
     gap: 8rem;
-    background: blue;
 }
 #actus .actu-box.reverse{
     display: flex;
     flex-direction: row-reverse;
-    background-color: magenta;
 }
 #actus .actu-infos{
     display: flex;
     flex-direction: column;
     text-align: center;
+    width: 100%;
 }
 #actus .actu-infos .actu-title, #actus .actu-infos .desc-actu{
     width: 95%;
