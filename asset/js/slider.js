@@ -1,4 +1,3 @@
-
 $(window).on('load', function() {
     $('#head-diapo').flexslider({
         controlNav : true,

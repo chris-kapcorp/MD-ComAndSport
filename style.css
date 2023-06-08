@@ -17,10 +17,8 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
     font-family: 'PP Hatton';
     font-weight: bold;
     src: url(./asset/font/PP\ Hatton\ Bold\ 700.woff2);
-
-    font-family: 'Montserrat';
-    src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 }
+
 :root{
     --noir : #000;
     --blanc : #fff;
@@ -73,7 +71,7 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    font: 400 16px/1.4 'Montserrat';
+    font: 400 16px/1.4 'Montserrat', sans-serif;
     background: var(--vert);
     width: 100vw;
     height: 100vh;
@@ -455,10 +453,14 @@ body::-webkit-scrollbar{
 
 #partners{
     background: var(--noir);
-    height: 502px;
+    /* height: 502px; */
+    height: 1200px;
     color: var(--blanc);
     margin: 5rem 0;
 }
+/* #partners .wrap{
+    background: maroon;
+} */
 #partners .partner-infos{
     display: flex;
     justify-content: center;
@@ -466,29 +468,53 @@ body::-webkit-scrollbar{
     gap: 103px;
     font-size: 20px;
     text-align: center;
+    width: 90%;
+    height: 50%;
+    margin: 0 auto;
     background-color: darkgoldenrod;
 }
 #partners .partner-show{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 35px;
-    /* background-color: magenta; */
+    height: 100%;
+    width: 20%;
+    background-color: magenta;
 }
 #partners .partner-img{
     position: relative;
+    width: fit-content;
+    margin: 0 auto;
+    cursor: pointer; 
+    border-radius: 100%;
 }
 #partners .partner-img img{
     border-radius: 100%;
-    cursor: pointer;
 }
-#partners .partner-img img:hover .partner-rs{
+#partners .partner-rs{
     position: absolute;
+    bottom: -1rem;
+    height: 116px;
+    width: 115px;
+    border-radius: 100%;
+    visibility: hidden;
+    transition: ease-in-out .5s;
+    opacity: .7;
+    color: var(--noir);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#partners .partner-img:hover .partner-rs{
     bottom: 0;
+    visibility: visible;
     background-color: var(--vert);
-    opacity: .4;
-    /* border: 5px solid magenta; */
-    height: 100%;
-    width: 100%;
+}
+#partners .socials svg{
+    width: 30px;
+    height: 26px;
 }
 
 

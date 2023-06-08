@@ -16,7 +16,6 @@ function actus_query() {
     let count = 0;
     let recount = 0;
     let nb_actus = 0;
-    // let firstdata = null;
 
     fetch('http://localhost/stage/md_com&sport/wp-json/wp/v2/actu')
   .then(response => response.json())
@@ -134,8 +133,6 @@ function actus_query() {
                     actus_show.append(actu_box);
 
                     plus.style.display = 'none';
-
-                    console.log(recount);
                 });
 
             }
