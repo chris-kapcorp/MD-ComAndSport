@@ -17,6 +17,9 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
     font-family: 'PP Hatton';
     font-weight: bold;
     src: url(./asset/font/PP\ Hatton\ Bold\ 700.woff2);
+
+    font-family: 'Montserrat';
+    src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 }
 :root{
     --noir : #000;
@@ -70,7 +73,7 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    font: 400 16px/1.4 Verdana, Arial, sans-serif;
+    font: 400 16px/1.4 'Montserrat';
     background: var(--vert);
     width: 100vw;
     height: 100vh;
@@ -448,8 +451,48 @@ body::-webkit-scrollbar{
     height: 2rem;
 }
 
+/* Partenaires */
 
-/* responsive */
+#partners{
+    background: var(--noir);
+    height: 502px;
+    color: var(--blanc);
+    margin: 5rem 0;
+}
+#partners .partner-infos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 103px;
+    font-size: 20px;
+    text-align: center;
+    background-color: darkgoldenrod;
+}
+#partners .partner-show{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    /* background-color: magenta; */
+}
+#partners .partner-img{
+    position: relative;
+}
+#partners .partner-img img{
+    border-radius: 100%;
+    cursor: pointer;
+}
+#partners .partner-img img:hover .partner-rs{
+    position: absolute;
+    bottom: 0;
+    background-color: var(--vert);
+    opacity: .4;
+    /* border: 5px solid magenta; */
+    height: 100%;
+    width: 100%;
+}
+
+
+/* Responsive */
 
 @media screen and (max-width: 1400px){
     #actus .actus-container{

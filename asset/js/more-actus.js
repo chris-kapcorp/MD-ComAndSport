@@ -3,9 +3,20 @@ const more = document.querySelector('#actus .actus-more .more-text');
 
 const actus_show = document.querySelector('#actus .actu-show');
 
+
+function ucFirst(str){
+    if(typeof str !== 'string' || str.length === 0){
+        return str
+    }
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+
 function actus_query() {
     let count = 0;
+    let recount = 0;
     let nb_actus = 0;
+    // let firstdata = null;
 
     fetch('http://localhost/stage/md_com&sport/wp-json/wp/v2/actu')
   .then(response => response.json())
@@ -16,11 +27,13 @@ function actus_query() {
             nb_actus++;
 
             if(nb_actus === 0){
-                console.log("pas d'actus");
+                
                 const empty = document.createElement('p');
                 empty.innerHTML = "Pas d'acualités pour le moment";
                 actus_show.append(empty);
+
             } else if(nb_actus >= 1 && nb_actus <= 3){
+
                 const actu_box = document.createElement('div');
                 const actu_infos = document.createElement('div');
                 const link_img = document.createElement('a');
@@ -49,8 +62,8 @@ function actus_query() {
                         return error;
                     });
 
-                actu_title.innerText = d.title.rendered;
-                desc_actu.innerText = d.acf.résumé_actu;
+                actu_title.innerText = ucFirst(d.title.rendered);
+                desc_actu.innerText = ucFirst(d.acf.résumé_actu);
 
                 link_img.appendChild(actu_img);
 
@@ -67,11 +80,11 @@ function actus_query() {
                 actu_box.append(actu_infos);
 
                 actus_show.append(actu_box);
+
             } else {
                 plus.addEventListener('click', function(){
-
-                    count++
-                    nb_actus++
+                    
+                    recount++;
 
                     const actu_box = document.createElement('div');
                     const actu_infos = document.createElement('div');
@@ -80,11 +93,12 @@ function actus_query() {
                     const actu_img = document.createElement('img');
                     const actu_title = document.createElement('h2');
                     const desc_actu = document.createElement('p');
-                    
+
                     actu_box.classList.add('actu-box');
-                    if (count % 2 === 0) {
+                    if (recount % 2 !== 0) {
                         actu_box.classList.add('reverse');
                     }
+                
                     actu_infos.classList.add('actu-infos');
                     actu_title.classList.add('actu-title');
                     desc_actu.classList.add('desc-actu');
@@ -120,6 +134,8 @@ function actus_query() {
                     actus_show.append(actu_box);
 
                     plus.style.display = 'none';
+
+                    console.log(recount);
                 });
 
             }

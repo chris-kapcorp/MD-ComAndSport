@@ -11,9 +11,17 @@ $all = array(
             'id' => 7,
             'slug' => '#infos'
         ),
-        'actus' => array(
+        'actualités' => array(
             'id' => 7,
             'slug' => '#actus'
+        ),
+        'partenaires' => array(
+            'id' => 7,
+            'slug' => '#partners'
+        ),
+        'contact' => array(
+            'id' => 7,
+            'slug' => '#contact'
         ),
     ),
 );

@@ -16,9 +16,9 @@ function wpdocs_codex_partner_init() {
         'parent_item_colon'     => __( 'Parent partenaire:', 'textdomain' ),
         'not_found'             => __( 'Aucun partenaire trouvé.', 'textdomain' ),
         'not_found_in_trash'    => __( 'Aucun partenaire trouvé dans la corbeille.', 'textdomain' ),
-        'featured_image'        => _x( 'partner Cover Image', 'Overrides the “Featured Image” phrase for this post type. Added in 4.3', 'textdomain' ),
-        'set_featured_image'    => _x( 'Set cover image', 'Overrides the “Set featured image” phrase for this post type. Added in 4.3', 'textdomain' ),
-        'remove_featured_image' => _x( 'Remove cover image', 'Overrides the “Remove featured image” phrase for this post type. Added in 4.3', 'textdomain' ),
+        'featured_image'        => _x( 'Couverture du partenaire', 'Overrides the “Featured Image” phrase for this post type. Added in 4.3', 'textdomain' ),
+        'set_featured_image'    => _x( 'Choisir une image', 'Overrides the “Set featured image” phrase for this post type. Added in 4.3', 'textdomain' ),
+        'remove_featured_image' => _x( 'Supprimer l\'image', 'Overrides the “Remove featured image” phrase for this post type. Added in 4.3', 'textdomain' ),
         'use_featured_image'    => _x( 'Use as cover image', 'Overrides the “Use as featured image” phrase for this post type. Added in 4.3', 'textdomain' ),
         'archives'              => _x( 'partner archives', 'The post type archive label used in nav menus. Default “Post Archives”. Added in 4.4', 'textdomain' ),
         'insert_into_item'      => _x( 'Insert into partner', 'Overrides the “Insert into post”/”Insert into page” phrase (used when inserting media into a post). Added in 4.4', 'textdomain' ),
@@ -28,6 +28,7 @@ function wpdocs_codex_partner_init() {
         'items_list'            => _x( 'partners list', 'Screen reader text for the items list heading on the post type listing screen. Default “Posts list”/”Pages list”. Added in 4.4', 'textdomain' ),
     );
 
+    
     $args = array(
         'labels'             => $labels,
         'public'             => true,
