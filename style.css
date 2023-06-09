@@ -43,22 +43,22 @@ form{
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 5rem;
+  justify-content: center;
 }
 label:not(:first-child){
   margin-top: 2rem;
 }
 input{
   border-radius: 5px;
-  border: none;
   padding: .3rem;
 }
 input[type=submit]{
-  padding: .5rem;
+  padding: 1rem 2rem;
   margin: 1rem;
   font-size: 1.2rem;
   cursor: pointer;
   border-radius : 10px;
+  border: none;
 }
 textarea{
   resize: none;
@@ -520,6 +520,70 @@ body::-webkit-scrollbar{
 }
 #partners .socials svg:hover{
     opacity: .7;
+}
+
+/* Contact */
+#contact{
+    height: max-content;
+    background: var(--blanc);
+}
+#contact .wrap{
+    border: 3px solid maroon;
+}
+#contact .form-contact{
+    border: 5px dashed yellow;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+#contact #formulaire{
+    background: blue;
+    width: 100%;
+}
+#contact #formulaire:not(#formulaire .submit){
+    gap: 4rem;
+}
+#contact .input{
+    border: 2px dashed pink;
+    display: flex;
+    flex-direction: column;
+}
+#contact .input:not(.input.content){
+    align-items: baseline;
+    width: 356px;
+}
+#contact .input.content{
+    width: 712px;
+    align-items: center;
+}
+#contact .input:not(.input.content) input{
+    width: 302px;
+}
+#contact .input.content input, #contact .input.content textarea{
+    width: 100%;
+}
+#contact #formulaire .container{
+    background-color: magenta;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#contact #formulaire .message-infos{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+#contact label, #contact #sent{
+    font-family: 'PP Hatton', sans-serif;
+    font-size: 16px;
+}
+#contact #sent{
+    background: inherit;
+    transition: all .5s;
+}
+#contact #sent:hover{
+    transform: scale(1.2);
+    background-color: var(--vert);
 }
 
 

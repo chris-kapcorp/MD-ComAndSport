@@ -1,5 +1,4 @@
-<?php global $all; global $metaHome; global $svg;
-?>
+<?php global $all; global $metaHome;?>
 
 <div id="infos">
     <div class="head-wrap">
