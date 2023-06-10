@@ -44,6 +44,7 @@ form{
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 4rem;
 }
 label:not(:first-child){
   margin-top: 2rem;
@@ -53,8 +54,6 @@ input{
   padding: .3rem;
 }
 input[type=submit]{
-  padding: 1rem 2rem;
-  margin: 1rem;
   font-size: 1.2rem;
   cursor: pointer;
   border-radius : 10px;
@@ -523,61 +522,91 @@ body::-webkit-scrollbar{
 }
 
 /* Contact */
+
 #contact{
-    height: max-content;
+    height: 100vh;
     background: var(--blanc);
-}
-#contact .wrap{
-    border: 3px solid maroon;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #contact .form-contact{
-    border: 5px dashed yellow;
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    position: relative;
 }
 #contact #formulaire{
-    background: blue;
     width: 100%;
 }
-#contact #formulaire:not(#formulaire .submit){
+#contact #formulaire .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 4rem;
 }
-#contact .input{
-    border: 2px dashed pink;
+
+#contact #formulaire .message-infos{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    width: 65%;
+}
+
+#contact .input{
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
 #contact .input:not(.input.content){
     align-items: baseline;
     width: 356px;
 }
+#contact .input:not(.input.content.textarea){
+    border-bottom: 2px solid var(--noir);
+}
 #contact .input.content{
     width: 712px;
     align-items: center;
 }
-#contact .input:not(.input.content) input{
-    width: 302px;
+
+#contact .input:not(.input.content.textarea):hover label,
+#contact .input:not(.input.content.textarea):focus-within label{
+    top: -1.5rem;
 }
-#contact .input.content input, #contact .input.content textarea{
-    width: 100%;
-}
-#contact #formulaire .container{
-    background-color: magenta;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#contact #formulaire .message-infos{
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
-}
+
 #contact label, #contact #sent{
     font-family: 'PP Hatton', sans-serif;
     font-size: 16px;
 }
+#contact label:not(.input.content.textarea label){
+    position: absolute;
+    top: 0;
+    transition: .5s;
+    pointer-events: none;
+}
+
+#contact .input input{
+    width: 100%;
+    background: transparent;
+    outline: none;
+    border: none;
+    font-size: 1.2rem;
+}
+#contact .input.content{
+    width: 100%;
+}
+#contact .input.content input, #contact .input.content textarea{
+    width: 100%;
+}
+#contact .input.content textarea{
+    margin-top: .5rem;
+    font-size: 1.2rem;
+}
 #contact #sent{
+    padding: 1rem;
+    margin-bottom: 2rem;
     background: inherit;
     transition: all .5s;
 }
