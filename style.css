@@ -355,6 +355,7 @@ body::-webkit-scrollbar{
 #infos .card-front{
     background: var(--blanc);
     color: var(--noir);
+    height: 100%;
     transform: rotateY(180deg);
 }
 #infos .card-title.hover{
@@ -366,18 +367,16 @@ body::-webkit-scrollbar{
     font-size: 20px;
     width: 100%;
     height: 30%;
-    margin: 0 auto;
 }
 #infos .line-hover{
     border-top: 1px solid var(--noir);
 }
+#infos .card-front .card-infos{
+    height: 100%;
+}
 #infos .card-front .wrap-desc-service{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     width: 90%;
-    height: 66%;
+    height: 65%;
     padding: 0 1rem;
     margin: 0.5rem auto;
 }
@@ -385,11 +384,15 @@ body::-webkit-scrollbar{
     width: 100%;
     height: 100%;
     list-style-type: disc;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 #infos .desc-service li{
+    width: 100%;
     text-align: left;
     margin: 0 auto .3rem;
+    list-style-position: inside;
 }
 
 /* Actualités */

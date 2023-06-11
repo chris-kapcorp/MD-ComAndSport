@@ -1,28 +1,3 @@
-<!-- <div id="contact">
-    <div class="wrap">
-        <h2 class="title">Contact</h2>
-    </div>
-
-    <div class="form-box">
-        <div class="form-value">
-            <form action="" method="post" novalidate>
-
-                <div class="inputbox">
-                    <input type="email" required>
-                    <label for="">Email</label>
-                </div>
-
-                <div class="inputbox">
-                    <input type="password" required>
-                    <label for="">Password</label>
-                </div>
-
-                <button>Envoyer</button>
-            </form>
-        </div>
-    </div>
-</div> -->
-
 <div id="contact">
     <div class="wrap">
         <h2 class="title">Contact</h2>
