@@ -39,13 +39,12 @@ ul, ol{
 img {
     vertical-align: bottom;
 }
-form{
+/* form{
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 4rem;
-}
+} */
 label:not(:first-child){
   margin-top: 2rem;
 }
@@ -278,7 +277,6 @@ body::-webkit-scrollbar{
 }
 #infos .card-container{
     width: 218px;
-    /* height: 328px; */
     height: 400px;
     perspective: 800px;
 }
@@ -452,7 +450,7 @@ body::-webkit-scrollbar{
 
 #partners{
     background: var(--noir);
-    height: 502px;
+    height: max-content;
     color: var(--blanc);
     margin: 5rem 0;
 }
@@ -482,6 +480,7 @@ body::-webkit-scrollbar{
     flex-direction: column;
     justify-content: space-evenly;
     gap: 35px;
+    margin-bottom: 4rem;
 }
 #partners .partner-img{
     position: relative;
@@ -520,100 +519,108 @@ body::-webkit-scrollbar{
 #partners .socials svg:hover{
     opacity: .7;
 }
+#partners .partner-name{
+    width: fit-content;
+    margin: 0 auto;
+}
 
 /* Contact */
 
 #contact{
-    height: 100vh;
-    background: var(--blanc);
+    background-color: var(--blanc);
+    height: max-content;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
-#contact .form-contact{
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+#contact .form-container{
     position: relative;
-}
-#contact #formulaire{
     width: 100%;
 }
-#contact #formulaire .container{
+#contact form{
+    width: 75%;
+    height: 100%;
+    margin: 0 auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 4rem;
+    flex-wrap: wrap;
 }
-
-#contact #formulaire .message-infos{
+#contact .input-wrap{
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    width: 100%;
     gap: 4rem;
-    width: 65%;
 }
-
-#contact .input{
-    display: flex;
+#contact .input-wrap.message-infos{
     flex-direction: column;
+    width: 100%;
+}
+#contact .inputbox{
     position: relative;
-}
-#contact .input:not(.input.content){
-    align-items: baseline;
-    width: 356px;
-}
-#contact .input:not(.input.content.textarea){
     border-bottom: 2px solid var(--noir);
+    width: 100%;
 }
-#contact .input.content{
-    width: 712px;
-    align-items: center;
-}
-
-#contact .input:not(.input.content.textarea):hover label,
-#contact .input:not(.input.content.textarea):focus-within label{
-    top: -1.5rem;
-}
-
-#contact label, #contact #sent{
-    font-family: 'PP Hatton', sans-serif;
-    font-size: 16px;
-}
-#contact label:not(.input.content.textarea label){
+#contact .inputbox label{
+    cursor: text;
     position: absolute;
     top: 0;
-    transition: .5s;
-    pointer-events: none;
+    left: .5rem;
+    transform: translateY(-120%);
+    font-family: 'PP Hatton';
+    transition: all .5s;
 }
-
-#contact .input input{
-    width: 100%;
+#contact .inputbox.object label{
+    left: 47%;
+}
+#contact .inputbox input:focus ~ label,
+#contact .inputbox input:valid ~ label,
+#contact .inputbox input:hover ~ label{
+    top: -2rem;
+}
+#contact .inputbox input{
     background: transparent;
     outline: none;
     border: none;
-    font-size: 1.2rem;
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
 }
-#contact .input.content{
+#contact .message-infos .content{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-family: 'PP Hatton';
+}
+#contact .input-wrap.message-infos .content{
     width: 100%;
 }
-#contact .input.content input, #contact .input.content textarea{
+#contact .input-wrap.message-infos .content textarea{
+    font-size: 18px;
     width: 100%;
-}
-#contact .input.content textarea{
-    margin-top: .5rem;
-    font-size: 1.2rem;
+    height: 8.5rem;
+    border: 1px solid var(--noir);
 }
 #contact #sent{
-    padding: 1rem;
-    margin-bottom: 2rem;
+    text-align: center;
+    padding: 1rem 2rem;
+    font-family: 'PP Hatton';
+    margin-bottom: 1rem;
     background: inherit;
+    border-radius: 10px;
+    border: none;
+    font-size: 17px;
     transition: all .5s;
 }
-#contact #sent:hover{
-    transform: scale(1.2);
+#contact #sent:hover {
+    transform: scale(120%);
     background-color: var(--vert);
 }
+
 
 
 /* Responsive */
@@ -730,6 +737,14 @@ body::-webkit-scrollbar{
         justify-content: center;
         gap: 5rem;
     }
+
+    #partners .partner-container{
+        margin-top: -3rem;
+    }
+
+    #contact .inputbox.object label{
+        left: 46%;
+    }
 }
 
 
@@ -753,6 +768,11 @@ body::-webkit-scrollbar{
     }
 }
 
+@media screen and (max-width: 600px){
+    #contact .inputbox.object label{
+        left: 43%;
+    }
+}
 
 @media screen and (max-width: 400px){
     #masthead .mobile-main-menu .mobile-container{
@@ -767,5 +787,12 @@ body::-webkit-scrollbar{
     }
     .head-logo, .mobile-head-logo{
         left: 0;
+    }
+
+    #contact .input-wrap{
+        flex-direction: column;
+    }
+    #contact .inputbox.object label{
+        left: 40%;
     }
 }

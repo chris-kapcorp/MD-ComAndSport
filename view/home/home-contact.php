@@ -1,50 +1,74 @@
+<!-- <div id="contact">
+    <div class="wrap">
+        <h2 class="title">Contact</h2>
+    </div>
+
+    <div class="form-box">
+        <div class="form-value">
+            <form action="" method="post" novalidate>
+
+                <div class="inputbox">
+                    <input type="email" required>
+                    <label for="">Email</label>
+                </div>
+
+                <div class="inputbox">
+                    <input type="password" required>
+                    <label for="">Password</label>
+                </div>
+
+                <button>Envoyer</button>
+            </form>
+        </div>
+    </div>
+</div> -->
 
 <div id="contact">
     <div class="wrap">
         <h2 class="title">Contact</h2>
 
-        <div class="form-contact">
-            <form action="" method="post" id="formulaire" novalidate>
+        <div class="form-container">
+            <div class="form-wrap">
+                <form action="" method="post" novalidate>
+                    <div class="input-wrap">
+                        <div class="inputbox">
+                            <input type="text" name="lastname" id="lastname" required>
+                            <label for="lastname">Nom*</label>
+                        </div>
 
-                <div class="container full-name">
-                    <div class="input">
-                        <label for="l_name">Nom*</label>
-                        <input type="text" name="l_name" id="l_name">
+                        <div class="inputbox">
+                            <input type="text" name="firstname" id="firstname" required>
+                            <label for="firstname">Prénom*</label>
+                        </div>
                     </div>
-                    
-                    <div class="input">
-                        <label for="f_name">Prénom*</label>
-                        <input type="text" name="f_name" id="f_name">
-                    </div>
-                </div>
-                
-                <div class="container pro-infos">
-                    <div class="input">
-                        <label for="structure">Structure</label>
-                        <input type="text" name="structure" id="structure">
-                    </div>
-                    
-                    <div class="input">
-                        <label for="mail">E-mail*</label>
-                        <input type="email" name="mail" id="mail">
-                    </div>
-                </div>
 
-                <div class="message-infos">
-                    <div class="input content">
-                        <label for="objet">Objet*</label>
-                        <input type="text" name="objet" id="objet">
+                    <div class="input-wrap">
+                        <div class="inputbox">
+                            <input type="text" name="structure" id="structure" required>
+                            <label for="structure">Structure</label>
+                        </div>
+
+                        <div class="inputbox">
+                            <input type="email" name="email" id="email" required>
+                            <label for="email">E-mail*</label>
+                        </div>
                     </div>
-                    
-                    <div class="input content textarea">
-                        <label for="message">Message*</label>
-                        <textarea name="message" id="message"></textarea>
+
+                    <div class="input-wrap message-infos">
+                        <div class="inputbox object">
+                            <input type="text" name="objet" id="objet" required>
+                            <label for="objet">Objet*</label>
+                        </div>
+
+                        <div class="content">
+                            <textarea name="message" id="message"></textarea>
+                            <label for="message">Message*</label>
+                        </div>
                     </div>
-                </div>
-                
-                <input type="submit" id="sent" name="sent" value="Envoyer">
-                
-            </form>
+
+                    <button id="sent">Envoyer</button>
+                </form>
+            </div>
         </div>
     </div>
 </div>
