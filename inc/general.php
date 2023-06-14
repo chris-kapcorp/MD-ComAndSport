@@ -65,6 +65,7 @@ function mdcs_scripts() {
         wp_enqueue_script('slider-js', get_template_directory_uri() . '/asset/js/slider.js', array(), _S_VERSION, true);
 
         wp_enqueue_script('more-actus-js', get_template_directory_uri() . '/asset/js/more-actus.js', array(), _S_VERSION, true);
+        wp_enqueue_script('contact-js', get_template_directory_uri() . '/asset/js/contact.js', array(), _S_VERSION, true);
     }
 }
 add_action( 'wp_enqueue_scripts', 'mdcs_scripts' );
