@@ -53,7 +53,7 @@ body{
     font: 400 16px/1.4 'Montserrat', sans-serif;
     background: var(--vert);
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     overflow-x: hidden;
     overflow-y: auto;
 }
@@ -94,8 +94,8 @@ body::-webkit-scrollbar{
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 6rem;
-    max-height: 6rem;
+    height: 10%;
+    max-height: 10%;
     z-index: 100;
 }
 #masthead .main-menu{
@@ -621,7 +621,7 @@ body::-webkit-scrollbar{
     background-color: var(--noir);
     color: var(--blanc);
     width: 100%;
-    height: 50%;
+    height: 30rem;
     margin: 0 auto;
 }
 #colophon .upper-foot-wrap{
@@ -691,6 +691,21 @@ body::-webkit-scrollbar{
 #colophon .mentions a:hover{
     color: var(--vert);
 }
+
+
+/* Mentions légales */
+#masthead.head-mentions{
+    position: relative;
+}
+#mentions{
+    height: 100vh;
+    width: 94%;
+    background: var(--blanc);
+    margin: 4rem auto;
+}
+
+
+
 
 /* Responsive */
 
@@ -834,6 +849,9 @@ body::-webkit-scrollbar{
         left: 46%;
     }
 
+    #colophon{
+        height: 40rem;
+    }
     #colophon .upper-foot-wrap{
        display: flex;
        flex-direction: column;
@@ -915,6 +933,13 @@ body::-webkit-scrollbar{
     #masthead .mobile-main-menu .mobile-container{
         width: 35%;
     }
+
+    #colophon{
+        height: 55rem;
+    }
+    #colophon .lower-footer{
+        gap: 5rem;
+    }
 }
 
 @media screen and (max-width: 700px){
@@ -948,6 +973,9 @@ body::-webkit-scrollbar{
         left: 40%;
     }
 
+    #colophon{
+        height: 45rem;
+    }
     #colophon .upper-foot-wrap{
         height: 75%;
     }

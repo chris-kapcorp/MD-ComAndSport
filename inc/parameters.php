@@ -23,5 +23,9 @@ $all = array(
             'id' => 111,
             'slug' => '#contact'
         ),
+        'mentions' => array(
+            'id' => 3,
+            'slug' => 'mentions'
+        ),
     ),
 );

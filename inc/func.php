@@ -156,3 +156,20 @@ function displayRsOverImg($meta, $nomtab1, $nomtab2 = null, $classRS)
         }
     }
 }
+
+function autoTitleContent(){
+    $upper_value = array();
+
+    if (!empty(get_the_content())) {
+       $content = explode(PHP_EOL, get_the_content()); 
+
+        foreach($content as $c){
+            $upper_value[] = explode(PHP_EOL, $c);
+            foreach($upper_value as $value){
+                // if(str_contains())
+            }
+        }
+        print_r($upper_value);
+    }
+    
+}
