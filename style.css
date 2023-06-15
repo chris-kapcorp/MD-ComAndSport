@@ -626,12 +626,12 @@ body::-webkit-scrollbar{
 }
 #colophon .upper-foot-wrap{
     width: 94%;
-    height: 60%;
+    height: 70%;
     margin: 0 auto;
 }
 #colophon .lower-foot-wrap{
     width: 94%;
-    height: 40%;
+    height: 30%;
     margin: 0 auto;
 }
 #colophon .upper-footer{
@@ -699,6 +699,11 @@ body::-webkit-scrollbar{
         margin: 0 auto;
         width: 85%;
     }
+
+    #infos .serv-legend{
+        padding: 0 1rem;
+        font-size: 17px;
+    }
 }
 
 
@@ -713,7 +718,6 @@ body::-webkit-scrollbar{
 
 @media screen and (max-width: 1200px){
     #colophon .logo-wrap{
-        background: magenta;
         justify-content: center;
         align-items: center;
         gap: 4rem;
@@ -790,6 +794,13 @@ body::-webkit-scrollbar{
     #masthead .mobile-head-logo{
         display: block;
     }
+
+    #colophon .logo-wrap{
+        transform: translate(8%, -260%);
+    }
+    #colophon .foot-logos{
+        width: 90%;
+    }
     
 }
 
@@ -823,18 +834,31 @@ body::-webkit-scrollbar{
         left: 46%;
     }
 
-    #colophon .upper-footer{
-        background: magenta;
+    #colophon .upper-foot-wrap{
+       display: flex;
+       flex-direction: column;
     }
-    #colophon .foot-connect{
-        display: flex;
-        flex-direction: column;
-        border: 3px solid blue;
+    #colophon .title.foot-title{
+        padding-top: 2rem;
+        transform: translateY(120%);
+    }
+    #colophon .logo-wrap{
+        transform: translateY(350%);
+    }
+    #colophon .upper-footer{
+        position: relative;
     }
     #colophon .footer-logo{
-        transform: translateY(-50%);
         width: 212px;
         height: 142px;
+        position: absolute;
+        top: 0;
+        left: 43%;
+    }
+    #colophon .lower-footer{
+        justify-content: space-evenly;
+        gap: 8rem;
+        padding: 0rem;
     }
 
 }
@@ -850,6 +874,39 @@ body::-webkit-scrollbar{
         flex-direction: column;
         align-items: center;
         gap: 1.625rem;
+    }
+
+    #colophon{
+        height: 80%;
+    }
+    #colophon p{
+        font-size: 18px;
+    }
+    #colophon .upper-foot-wrap{
+        height: 70%;
+    }
+    #colophon .footer-logo{
+        left: 37%;
+    }
+    #colophon .foot-connect:not(img){
+        height: 65%;
+        display: flex;
+        align-items: baseline;
+    }
+    #colophon .logo-wrap{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(50%);
+        width: 90%;
+    }
+    #colophon .foot-logos{
+        width: 100%;
+    }
+    #colophon .lower-footer{
+        flex-direction: column-reverse;
+        justify-content: center;
+        height: 100%;
     }
 }
 
@@ -889,5 +946,27 @@ body::-webkit-scrollbar{
 
     #contact .inputbox.object label{
         left: 40%;
+    }
+
+    #colophon .upper-foot-wrap{
+        height: 75%;
+    }
+    
+    #colophon .logo-wrap{
+        gap: 3rem;
+    }
+    #colophon .foot-logos{
+        width: 100%;
+    }
+    #colophon .lower-foot-wrap{
+        height: 25%;
+        padding: 0;
+        gap: 0;
+    }
+    #colophon .lower-footer{
+        gap: 3rem;
+    }
+    #colophon .footer-logo{
+        left: 30%;
     }
 }
